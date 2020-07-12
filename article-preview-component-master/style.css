@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  font-size: 16px;
+  background-color: hsl(210, 46%, 95%);
+}
+.container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.side-image {
+  width: 300px;
+  height: 300px;
+}
+.side-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+.content {
+  background-color: #fff;
+  height: 300px;
+  width: 450px;
+  padding: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 0px 10px 10px 0px;
+}
+.content p {
+  font-size: 13px;
+}
+.content p:nth-child(1) {
+  font-size: 20px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+}
+.content p:nth-child(2) {
+  margin-top: 10px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+.social {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+.details {
+  display: flex;
+}
+.social p:nth-child(1) {
+  font-size: 16px;
+}
+.social p:nth-child(2) {
+  margin-top: 5px;
+}
+.details-inner {
+  margin-left: 15px;
+}
+.share {
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  padding: 10px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+.social-links {
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  position: absolute;
+  left: -110px;
+  top: -70px;
+  cursor: pointer;
+  opacity: 0;
+}
+.toggle {
+  opacity: 1;
+}
+.triangle {
+  height: 0px;
+  width: 0px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid hsl(217, 19%, 35%);
+  position: absolute;
+  left: 110px;
+  top: 40px;
+}
+.social-links p {
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 4px;
+  font-weight: 200;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.share-mobile {
+  display: none;
+}
+@media (max-width: 550px) {
+  .container {
+    flex-direction: column;
+  }
+  .side-image {
+    width: 350px;
+    height: 250px;
+  }
+  .content {
+    width: 350px;
+    height: 290px;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .content p:nth-child(1) {
+    font-size: 16px;
+  }
+  .content p:nth-child(2) {
+    font-size: 14px;
+  }
+  .social p:nth-child(1) {
+    font-size: 13px;
+  }
+  .side-image img {
+    border-radius: 10px 10px 0px 0px;
+  }
+  .triangle {
+    display: none;
+  }
+  .social-links {
+    z-index: 1;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    top: -10px;
+    left: -275px;
+    border-radius: 0px 0px 10px 10px;
+    width: 350px;
+    align-items: center;
+  }
+  .share-mobile {
+    display: block;
+    border-radius: 50%;
+    background-color: hsl(210, 46%, 95%);
+    padding: 10px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+  }
+  .icons {
+    width: 40%;
+    margin-right: 5%;
+  }
+}
